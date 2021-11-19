@@ -12,6 +12,9 @@ import FeatureScreen from './app/screens/FeatureScreen';
 import GenreScreen from './app/screens/GenreScreen';
 import BookmarkScreen from './app/screens/BookmarkScreen';
 
+
+//HAHAHAHSJHSAGDJHSJGHCVDJHSHCFVHSDFGCJHSDBGFHJSDFGCJHGSDCFGSDFGHJSDBFDJHSFBSJDHBCFDSH SDHFVDHSFSDCHJSDFJH
+
 const { StatusBarManager } = NativeModules;
 const Stack = createNativeStackNavigator();
 
