@@ -15,6 +15,8 @@ import BookmarkScreen from './app/screens/BookmarkScreen';
 const { StatusBarManager } = NativeModules;
 const Stack = createNativeStackNavigator();
 
+//hello
+
 export default function App() {
   return (
     <SafeAreaView style={styles.container}> 
