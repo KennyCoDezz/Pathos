@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image, Dimensions} from 'react-native';
 import AppLoading from 'expo-app-loading';
 import{ useFonts, OpenSans_800ExtraBold} from '@expo-google-fonts/open-sans';
+import colors from '../config/colors'
 
 const BookmarkScreen =({navigation})=> {
   
@@ -238,20 +239,19 @@ const BookmarkScreen =({navigation})=> {
   
     navigationBar: {
       width: "100%",
+      position: 'absolute',
       bottom: 0,
       borderTopWidth: 1,
-      borderColor: "#454545"
+      borderColor: colors.navBarBackgroundColor,
     },
-  
     background1: {
-      flexDirection: 'row',
-      justifyContent: 'space-evenly',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        backgroundColor: colors.navBarBackgroundColor,
     },
-  
     iconNavBar: {
-      height: 45,
-      width: 45
-  
+        color: colors.iconColor,
+        margin: 5,
     },
   
     bookCover: {
