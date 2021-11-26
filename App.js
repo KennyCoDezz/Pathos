@@ -11,6 +11,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import FeatureScreen from './app/screens/FeatureScreen';
 import GenreScreen from './app/screens/GenreScreen';
 import BookmarkScreen from './app/screens/BookmarkScreen';
+import Action_AdventureScreen from './app/screens/Action_AdventureScreen';
+import RomanceScreen from './app/screens/RomanceScreen';
+import HorrorScreen from './app/screens/HorrorScreen';
+import ScienceFictionScreen from './app/screens/ScienceFictionScreen';
+import FantasyScreen from './app/screens/FantasyScreen';
 
 const { StatusBarManager } = NativeModules;
 const Stack = createNativeStackNavigator();
@@ -45,6 +50,21 @@ export default function App() {
           <Stack.Screen
           name='BookmarkScreen'
           component={BookmarkScreen}></Stack.Screen>
+          <Stack.Screen
+          name='Action_AdventureScreen'
+          component={Action_AdventureScreen}></Stack.Screen>
+          <Stack.Screen
+          name='RomanceScreen'
+          component={RomanceScreen}></Stack.Screen>
+          <Stack.Screen
+          name='HorrorScreen'
+          component={HorrorScreen}></Stack.Screen>
+          <Stack.Screen
+          name='ScienceFictionScreen'
+          component={ScienceFictionScreen}></Stack.Screen>
+          <Stack.Screen
+          name='FantasyScreen'
+          component={FantasyScreen}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />
