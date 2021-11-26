@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     },
     header: {
         backgroundColor: colors.red,
-        height: 110,
+        height: 120,
         width: '100%',
     },
     backButton: {
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
         marginBottom: 47,
     },
     scrollViewContent: {
-        width: '87%', 
+        width: '90%', 
         height: 170,
         marginTop: 10,
         flexDirection: 'row',

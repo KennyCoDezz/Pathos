@@ -56,75 +56,45 @@ if(!fontsLoaded){
                  <View style={styles.viewBackground} contentContainerStyle={{alignItems:'center'}}>
                         <View style={styles.contentBoxWrapper} horizontal={true}>
                             <View style={styles.contentBox}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={()=>navigation.navigate('Action_AdventureScreen')}>
                                  <Image source={require('../assets/actad.png')} 
-                                    style={{width: 115, 
-                                            height: 110, 
-                                            position: 'absolute',
-                                            marginLeft: "7%", 
-                                            marginBottom: "10%", }}>
+                                    style={{width: '100%', height: '100%',}}>
                                 </Image>
                             </TouchableOpacity>
                             </View>
                             <View style={styles.contentBox}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={()=>navigation.navigate('RomanceScreen')}>
                                  <Image source={require('../assets/romance.png')} 
-                                    style={{width: 115, 
-                                            height: 110, 
-                                            position: 'absolute',
-                                            marginLeft: "7%", 
-                                            marginBottom: "10%", }}>
-                                </Image>
-                            </TouchableOpacity>
-                            </View>
-                        </View>
-                    <View style={styles.contentBoxWrapper} horizontal={true}>
-                            <View style={styles.contentBox}>
-                            <TouchableOpacity>
-                                 <Image source={require('../assets/mystery.png')} 
-                                    style={{width: 115, 
-                                            height: 110, 
-                                            position: 'absolute',
-                                            marginLeft: "7%", 
-                                            marginBottom: "10%", }}>
-                                </Image>
-                            </TouchableOpacity>
-                            </View>
-                            <View style={styles.contentBox}>
-                            <TouchableOpacity>
-                                 <Image source={require('../assets/horror.png')} 
-                                    style={{width: 115, 
-                                            height: 110, 
-                                            position: 'absolute',
-                                            marginLeft: "7%", 
-                                            marginBottom: "10%", }}>
+                                    style={{width: '100%', height: '100%',}}>
                                 </Image>
                             </TouchableOpacity>
                             </View>
                         </View>
                         <View style={styles.contentBoxWrapper} horizontal={true}>
                             <View style={styles.contentBox}>
-                            <TouchableOpacity>
-                                 <Image source={require('../assets/scifi.png')} 
-                                    style={{width: 115, 
-                                            height: 110, 
-                                            position: 'absolute',
-                                            marginLeft: "7%", 
-                                            marginBottom: "10%", }}>
+                            <TouchableOpacity onPress={()=>navigation.navigate('FantasyScreen')}>
+                                 <Image source={require('../assets/mystery.png')} 
+                                    style={{width: '100%', height: '100%',}}>
                                 </Image>
                             </TouchableOpacity>
                             </View>
                             <View style={styles.contentBox}>
-                            <TouchableOpacity>
-                                 <Image source={require('../assets/nonfiction.png')} 
-                                    style={{width: 115, 
-                                            height: 110, 
-                                            position: 'absolute',
-                                            marginLeft: "7%", 
-                                            marginBottom: "10%", }}>
+                            <TouchableOpacity onPress={()=>navigation.navigate('HorrorScreen')}>
+                                 <Image source={require('../assets/horror.png')} 
+                                    style={{width: '100%', height: '100%',}}>
                                 </Image>
                             </TouchableOpacity>
                             </View>
+                        </View>
+                        <View style={styles.contentBoxWrapper} horizontal={true}>
+                            <View style={styles.contentBox}>
+                            <TouchableOpacity onPress={()=>navigation.navigate('ScienceFictionScreen')}>
+                                 <Image source={require('../assets/scifi.png')} 
+                                    style={{width: '100%', height: '100%',}}>
+                                </Image>
+                            </TouchableOpacity>
+                            </View>
+                            
                         </View>
                 </View>
 

@@ -88,7 +88,7 @@ const HomepageScreen=({navigation})=> {
                 <View style={styles.navigationBar}>
                     <View style={styles.background1}>
                         <TouchableOpacity onPress={()=>navigation.navigate('HomepageScreen')}>
-                            <MaterialIcons name="home" size={35} style={styles.iconNavBar}>
+                            <MaterialIcons name="home" size={35} style={{color: colors.activeIcon,margin: 5,}}>
                             </MaterialIcons>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={()=>navigation.navigate('GenreScreen')}>
