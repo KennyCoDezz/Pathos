@@ -5,7 +5,7 @@ export default {
     red: '#ff0000',
 
     //navbar and background color
-    backgroundColor: '#202020',
+    backgroundColor: '#1C1E27',
     navBarBackgroundColor: '#101010',
 
     //Homescreen
