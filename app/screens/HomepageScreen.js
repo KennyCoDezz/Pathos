@@ -43,7 +43,7 @@ const HomepageScreen=({navigation})=> {
                 </View>
                 <ScrollView style={styles.scrollviewBackground} contentContainerStyle={{alignItems:'center'}}>
                     <TouchableOpacity style={styles.welcomeBanner}>
-                        <Image source={require('../assets/adaptive-icon.png')} style={{width:'100%', height: '100%'}}></Image>
+                        <Image source={require('../assets/Image/welcome-banner.png')} style={{width:'100%', height: '100%'}}></Image>
                     </TouchableOpacity>
                     <View style={styles.content}>
                         <Text style={styles.textDesign}>Featured Books</Text>
