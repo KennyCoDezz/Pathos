@@ -259,7 +259,7 @@ return (
 
             <TouchableOpacity style = {styles.downloadButton}>
               <View>
-                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 25}}>Download</Text>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 25}}>Start Reading</Text>
               </View>
             </TouchableOpacity>
 
