@@ -4,34 +4,25 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Button, ScrollView, TouchableOpacity, Image, Dimensions} from 'react-native';
 import * as Font from 'expo-font';
-import { useFonts } from '@use-expo/font';
+//import { useFonts } from '@use-expo/font';
+import{ useFonts } from '@expo-google-fonts/open-sans';
 import AppLoading from 'expo-app-loading';
+import colors from '../config/colors';
 
-const fetchFonts = () => {
-    return Font.loadAsync ({
-      'OpenSans-ExtraBold': require("./assets/fonts/OpenSans-ExtraBold.ttf"),
-      'Kollektif': require("./assets/fonts/Kollektif.ttf")
-    });
-}
-
-
-export default function App() {
+const NorthandSouthOverview=({navigation})=> {
 
   /*const [isLoaded] = useFonts({
     "OpenSans-ExtraBold": require("./assets/fonts/OpenSans-ExtraBold.ttf"),
     "Kollektif": require("./assets/fonts/Kollektif.ttf"),
   });*/
 
-  const[dataLoaded, setDataLoaded] = useState(false);
-
-  if (!dataLoaded) {
-    return (
-      <AppLoading
-          startAsync = {fetchFonts}
-          onFinish = {() => setDataLoaded(true)}
-          onError = {(error) => console.warn(error)}
-      />
-    );
+  //replaced font loader into this code below due to an error
+  let [fontsLoaded, error] = useFonts({
+    "OpenSans-ExtraBold": require("../fonts/OpenSans-ExtraBold.ttf"),
+    "Kollektif": require("../fonts/Kollektif.ttf"),
+  });
+  if(!fontsLoaded){
+      return <AppLoading />
   }
 
   //Ito yung screen ng bookmarks
@@ -192,13 +183,14 @@ export default function App() {
 
   );*/
 
+  //changed the wrong path in images that causes errors
 return (
     <View style = {styles.container}>
 
         <View style = {styles.overviewContainer}>
             
-          <TouchableOpacity style = {styles.backBtn} activeOpacity = {0.1}>
-            <Image source = {require('./assets/back-icon.png')} style = {styles.buttonImageIconStyle}/>
+          <TouchableOpacity style = {styles.backBtn} activeOpacity = {0.1} onPress={()=>navigation.goBack()}>
+            <Image source = {require('../assets/back-icon.png')} style = {styles.buttonImageIconStyle}/>
           </TouchableOpacity>
           <Text style = {styles.backText}>Back</Text>
 
@@ -207,7 +199,7 @@ return (
           <View style = {styles.bookContainerOverview}>
 
             <View style = {styles.bookImageOverview}>
-                <Image source = {require('./assets/Image/north-and-south.png')} style = {{height: '100%', width: '30%', resizeMode: 'stretch'}}/>
+                <Image source = {require('../assets/Image/north-and-south.png')} style = {{height: '100%', width: '30%', resizeMode: 'stretch'}}/>
             </View>
 
             <View style = {styles.bookDetails}>
@@ -261,7 +253,7 @@ return (
 
             <View style = {styles.bookmarkBox}>
                 <TouchableOpacity>
-                    <Image source = {require('./assets/bookmarks.png')} style = {styles.bookmarkIcon}/>
+                    <Image source = {require('../assets/bookmarks.png')} style = {styles.bookmarkIcon}/>
                 </TouchableOpacity>
             </View>
 
@@ -275,26 +267,26 @@ return (
 
         </View>
 
-        <View style = {styles.navigationBar}>
-            <LinearGradient
-                start={{x:0,y:1}}
-                end={{x:1,y:1}}
-                colors={['#202020', '#202020']}
-                style={styles.background1}>
-                <TouchableOpacity>
-                    <Image source = {require('./assets/home.png')} style = {styles.iconNavBar}/>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Image source = {require('./assets/category.png')} style = {styles.iconNavBar}/>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Image source = {require('./assets/bookmarks.png')} style = {styles.iconNavBar}/>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Image source = {require('./assets/account-circle.png')} style = {styles.iconNavBar}/>
-                </TouchableOpacity>
-            </LinearGradient>
-        </View>
+        <View style={styles.navigationBar}>
+          <View style={styles.background1}>
+              <TouchableOpacity onPress={()=>navigation.navigate('HomepageScreen')}>
+                  <MaterialIcons name="home" size={35} style={{color: colors.activeIcon,margin: 5,}}>
+                  </MaterialIcons>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={()=>navigation.navigate('GenreScreen')}>
+                  <MaterialIcons name="category" size={35} style={styles.iconNavBar} >
+                  </MaterialIcons>
+              </TouchableOpacity>
+              <TouchableOpacity  onPress={()=>navigation.navigate('BookmarkScreen')}>
+                  <MaterialIcons name="bookmarks" size={35} style={styles.iconNavBar} >
+                  </MaterialIcons>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={()=>navigation.navigate('Prof')}>
+                  <MaterialIcons name="account-circle" size={35} style={styles.iconNavBar} >
+                  </MaterialIcons>
+              </TouchableOpacity>
+          </View>
+          </View>
     </View>
   );
 
@@ -364,20 +356,19 @@ const styles = StyleSheet.create({
 
   navigationBar: {
     width: "100%",
+    position: 'absolute',
     bottom: 0,
     borderTopWidth: 1,
-    borderColor: "#454545"
+    borderColor: colors.navBarBackgroundColor,
   },
-
   background1: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      backgroundColor: colors.navBarBackgroundColor,
   },
-
   iconNavBar: {
-    height: 45,
-    width: 45
-
+      color: colors.iconColor,
+      margin: 5,
   },
 
   bookCover: {
@@ -629,5 +620,7 @@ const styles = StyleSheet.create({
   }
 
 
-});
+})
+
+export default NorthandSouthOverview;
 

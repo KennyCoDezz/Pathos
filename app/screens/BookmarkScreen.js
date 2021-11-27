@@ -25,7 +25,7 @@ const BookmarkScreen =({navigation})=> {
       <View style = {styles.bookmarks}>
        
             <View style = {styles.buttonView}>
-                <TouchableOpacity style = {styles.backBtn} activeOpacity = {0.1}>
+                <TouchableOpacity style = {styles.backBtn} activeOpacity = {0.1} onPress={()=>navigation.goBack()}>
                   <Image source = {require('../assets/back-icon.png')} style = {styles.buttonImageIconStyle}/>
                 </TouchableOpacity>
                 <Text style = {styles.backText}>Back</Text>

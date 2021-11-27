@@ -16,6 +16,7 @@ import RomanceScreen from './app/screens/RomanceScreen';
 import HorrorScreen from './app/screens/HorrorScreen';
 import ScienceFictionScreen from './app/screens/ScienceFictionScreen';
 import FantasyScreen from './app/screens/FantasyScreen';
+import NorthandSouthOverview from './app/screens/NorthandSouthOverview'
 
 const { StatusBarManager } = NativeModules;
 const Stack = createNativeStackNavigator();
@@ -65,6 +66,9 @@ export default function App() {
           <Stack.Screen
           name='FantasyScreen'
           component={FantasyScreen}></Stack.Screen>
+          <Stack.Screen
+          name='NorthandSouthOverview'
+          component={NorthandSouthOverview}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />

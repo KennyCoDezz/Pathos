@@ -53,7 +53,7 @@ const HomepageScreen=({navigation})=> {
                     </View>
                     <View style={styles.scrollviewWrapper}>
                         <ScrollView style={styles.contentBoxWrapper} horizontal={true}>
-                            <TouchableOpacity style={styles.contentBox}>
+                            <TouchableOpacity style={styles.contentBox} onPress={()=>navigation.navigate('NorthandSouthOverview')}>
                                 <Image source={require('../assets/northandsouth.jpg')} style={{width:'100%', height: '100%'}}></Image>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.contentBox}>
@@ -88,7 +88,7 @@ const HomepageScreen=({navigation})=> {
                 <View style={styles.navigationBar}>
                     <View style={styles.background1}>
                         <TouchableOpacity onPress={()=>navigation.navigate('HomepageScreen')}>
-                            <MaterialIcons name="home" size={35} style={{color: colors.activeIcon,margin: 5,}}>
+                            <MaterialIcons name="home" size={35} style={{color: colors.iconColor,margin: 5,}}>
                             </MaterialIcons>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={()=>navigation.navigate('GenreScreen')}>
