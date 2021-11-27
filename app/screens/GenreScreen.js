@@ -73,7 +73,7 @@ if(!fontsLoaded){
                         <View style={styles.contentBoxWrapper} horizontal={true}>
                             <View style={styles.contentBox}>
                             <TouchableOpacity onPress={()=>navigation.navigate('FantasyScreen')}>
-                                 <Image source={require('../assets/mystery.png')} 
+                                 <Image source={require('../assets/fantasy.png')} 
                                     style={{width: '100%', height: '100%',}}>
                                 </Image>
                             </TouchableOpacity>
