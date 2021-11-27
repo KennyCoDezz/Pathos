@@ -24,7 +24,9 @@ const HomepageScreen=({navigation})=> {
                     <View style={styles.headerTextContainer}>
                             <Text style={styles.header_text}>Discover New</Text>
                     </View>
-                    <TouchableOpacity style={styles.profile_header}></TouchableOpacity>
+                    <TouchableOpacity style={styles.profile_header}>
+                        <Image source={require('../assets/profpic.jpg')} style={{width: '100%',height: '100%',borderRadius: 100 / 2,}}></Image>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.searchBar}>
                     <TextInput style={styles.inputSearchBar}
