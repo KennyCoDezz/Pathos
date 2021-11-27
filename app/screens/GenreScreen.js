@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     },
     upperNav: {
         width: "100%",
-        backgroundColor:colors.upperNavColor,
+        backgroundColor:colors.genrescreen_headerBackgroundColor,
         marginBottom: "13%",
     },
     searchBar: {
@@ -173,8 +173,8 @@ const styles = StyleSheet.create({
         color: colors.categoryTitleColor,
         fontSize: 40,
         fontFamily: 'SectionTitle',
-        marginLeft: "10%",
         marginBottom: "2%",
+        textAlign: 'center',
     },
     backDesign: {
         color: colors.categoryTitleColor,
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         borderTopWidth: 1,
         borderColor: "#454545",
-        backgroundColor: colors.navColor,
+        backgroundColor: colors.navBarBackgroundColor,
       
     },
     background1: {

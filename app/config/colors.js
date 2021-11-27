@@ -24,6 +24,12 @@ export default {
         Fantasy: '#b000d4',
         Romance: '#ff0059',
     
+    //GenreScreen
+    genrescreen_headerBackgroundColor: '#8f3b86',
+    
+    //FeaturedBook Screen
+    featurescreen_headerBackgroundColor: '#f17163',
+
     //genre screens common bg color for books
     bookBackgroundColor: '#110f20',
 

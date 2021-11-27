@@ -250,7 +250,7 @@ const styles = StyleSheet.create({
     upperNav: {
         width: "100%",
         height: "17%",
-        backgroundColor:colors.featUpperNav,
+        backgroundColor:colors.featurescreen_headerBackgroundColor,
         marginBottom: "13%",
     },
     searchBar: {
@@ -290,9 +290,9 @@ const styles = StyleSheet.create({
         color: colors.categoryTitleColor,
         fontSize: 35,
         fontFamily: 'SectionTitle',
-        marginLeft: "18%",
         marginBottom: "2%",
         marginTop:"5%",
+        textAlign: 'center',
     },
     backDesign: {
         color: colors.categoryTitleColor,

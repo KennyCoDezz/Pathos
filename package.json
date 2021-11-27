@@ -21,9 +21,12 @@
     "expo-font": "~9.2.1",
     "expo-linear-gradient": "~9.2.0",
     "expo-status-bar": "~1.0.4",
+    "fbjs": "^0.8.18",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+    "react-native-blob-util": "^0.13.17",
+    "react-native-pdf": "^6.4.0",
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.4.0",
     "react-native-web": "~0.13.12"
