@@ -8,6 +8,7 @@ import * as Font from 'expo-font';
 import{ useFonts } from '@expo-google-fonts/open-sans';
 import AppLoading from 'expo-app-loading';
 import colors from '../config/colors';
+import * as OpenAnything from 'react-native-openanything';
 
 const NorthandSouthOverview=({navigation})=> {
 
@@ -257,7 +258,7 @@ return (
                 </TouchableOpacity>
             </View>
 
-            <TouchableOpacity style = {styles.downloadButton}>
+            <TouchableOpacity style = {styles.downloadButton} onPress={()=> OpenAnything.Pdf('http://www.e4thai.com/e4e/images/pdf/level%206%20-%20North%20and%20South.pdf')}>
               <View>
                 <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 25}}>Start Reading</Text>
               </View>
@@ -288,10 +289,463 @@ return (
           </View>
           </View>
     </View>
+    
+  );
+}
+/*AFTER THE CURE
+ return (
+    <View style = {styles.container}>
+        <View style = {styles.overviewContainer}>
+            
+          <TouchableOpacity style = {styles.backBtn} activeOpacity = {0.1}>
+            <Image source = {require('./assets/back-icon.png')} style = {styles.buttonImageIconStyle}/>
+          </TouchableOpacity>
+          <Text style = {styles.backText}>Back</Text>
+          <Text style = {styles.overviewText}>Overview</Text>
+          <View style = {styles.bookContainerOverview}>
+            <View style = {styles.bookImageOverview}>
+                <Image source = {require('./assets/Image/after-the-cure.jpg')} style = {{height: '100%', width: '30%', resizeMode: 'stretch'}}/>
+            </View>
+            <View style = {styles.bookDetails}>
+              <Text style = {styles.bookTitleOverviewLabel}>After The Cure</Text>
+              <Text style = {styles.bookAuthorOverviewLabel}>Deidre Gould</Text>
+              <View style = {styles.bookDetailsContent}>
+                <View style = {styles.ratingContainer}>
+                    <Text style = {styles.bookRating}>4.6</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Rating</Text>
+                </View>
+                <View style = {styles.pagesCountContainer}>
+                    <Text style = {styles.bookRating}>373</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Pages</Text>
+                </View>
+                <View style = {styles.downloadsContainer}>
+                    <Text style = {styles.bookRating}>24.2k</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Download</Text>
+                </View>
+                  
+              </View>    
+            </View>
+          </View>
+        </View>
+        <View style = {styles.descriptionContainer}>
+          <View style = {styles.descriptionText}>
+              <View style = {styles.descriptionLabel}>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', marginLeft: 60, fontSize: 20}}>Description</Text>
+              </View>
+              <ScrollView>
+               <View style = {[styles.description, {height: '110%', width: '85%', marginLeft: '7%'}]}>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 21}}>
+                 Eight years ago the December Plague swept through the human population of earth. The Infected were driven mad by the disease, becoming violent and cannibalistic, killing even those closest to them without hesitation.
+                </Text>
+               </View>
+              </ScrollView>
+          </View>
+          <View style = {styles.downloadBoxContainer}>
+            <View style = {styles.bookmarkBox}>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/bookmarks.png')} style = {styles.bookmarkIcon}/>
+                </TouchableOpacity>
+            </View>
+            <TouchableOpacity style = {styles.downloadButton}>
+              <View>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 25}}>Start Reading</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style = {styles.navigationBar}>
+            <LinearGradient
+                start={{x:0,y:1}}
+                end={{x:1,y:1}}
+                colors={['#202020', '#202020']}
+                style={styles.background1}>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/home.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/category.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/bookmarks.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/account-circle.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+            </LinearGradient>
+        </View>
+    </View>
+  );
+} */
+
+
+/*THE CANTERVILLE GHOST
+return (
+    <View style = {styles.container}>
+        <View style = {styles.overviewContainer}>
+            
+          <TouchableOpacity style = {styles.backBtn} activeOpacity = {0.1}>
+            <Image source = {require('./assets/back-icon.png')} style = {styles.buttonImageIconStyle}/>
+          </TouchableOpacity>
+          <Text style = {styles.backText}>Back</Text>
+          <Text style = {styles.overviewText}>Overview</Text>
+          <View style = {styles.bookContainerOverview}>
+            <View style = {styles.bookImageOverview}>
+                <Image source = {require('./assets/Image/tcg.jpg')} style = {{height: '100%', width: '30%', resizeMode: 'stretch'}}/>
+            </View>
+            <View style = {styles.bookDetails}>
+              <Text style = {styles.bookTitleOverviewLabel}>The Canterville Ghost</Text>
+              <Text style = {styles.bookAuthorOverviewLabel}>Oscar Wilde</Text>
+              <View style = {styles.bookDetailsContent}>
+                <View style = {styles.ratingContainer}>
+                    <Text style = {styles.bookRating}>4.8</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Rating</Text>
+                </View>
+                <View style = {styles.pagesCountContainer}>
+                    <Text style = {styles.bookRating}>412</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Pages</Text>
+                </View>
+                <View style = {styles.downloadsContainer}>
+                    <Text style = {styles.bookRating}>69.4k</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Download</Text>
+                </View>
+                  
+              </View>    
+            </View>
+          </View>
+        </View>
+        <View style = {styles.descriptionContainer}>
+          <View style = {styles.descriptionText}>
+              <View style = {styles.descriptionLabel}>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', marginLeft: 60, fontSize: 20}}>Description</Text>
+              </View>
+             <ScrollView>
+                <View style = {[styles.description, {height: '110%', width: '85%', marginLeft: '7%'}]}>
+                  <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 16}}>
+                    Horace B. Otis, a wealthy American, purchases Canterville Chase, an ancient English manor-house, despite warnings that the house is known to be haunted. He moves into the house accompanied by his wife, his eldest son Washington, his daughter Virginia, and his two younger twin sons. Immediately upon arrival, the family is confronted by a bloodstain in a sitting room. The housekeeper, Mrs. Umney, explains that the stain has been there since 1575 and is the result of Lady Eleanore de Canterville having been brutally murdered by her husband, Sir Simon de Canterville.
+                  </Text>
+                </View>
+             </ScrollView>
+          </View>
+          <View style = {styles.downloadBoxContainer}>
+            <View style = {styles.bookmarkBox}>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/bookmarks.png')} style = {styles.bookmarkIcon}/>
+                </TouchableOpacity>
+            </View>
+            <TouchableOpacity style = {styles.downloadButton}>
+              <View>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 25}}>Start Reading</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style = {styles.navigationBar}>
+            <LinearGradient
+                start={{x:0,y:1}}
+                end={{x:1,y:1}}
+                colors={['#202020', '#202020']}
+                style={styles.background1}>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/home.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/category.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/bookmarks.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/account-circle.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+            </LinearGradient>
+        </View>
+    </View>
+  );
+} */
+
+
+/*ELEMENT OF FIRE
+ return (
+    <View style = {styles.container}>
+        <View style = {styles.overviewContainer}>
+            
+          <TouchableOpacity style = {styles.backBtn} activeOpacity = {0.1}>
+            <Image source = {require('./assets/back-icon.png')} style = {styles.buttonImageIconStyle}/>
+          </TouchableOpacity>
+          <Text style = {styles.backText}>Back</Text>
+          <Text style = {styles.overviewText}>Overview</Text>
+          <View style = {styles.bookContainerOverview}>
+            <View style = {styles.bookImageOverview}>
+                <Image source = {require('./assets/Image/Element-of-fire.jpg')} style = {{height: '100%', width: '30%', resizeMode: 'stretch'}}/>
+            </View>
+            <View style = {styles.bookDetails}>
+              <Text style = {styles.bookTitleOverviewLabel}>The Element of Fire</Text>
+              <Text style = {styles.bookAuthorOverviewLabel}>Martha Wells</Text>
+              <View style = {styles.bookDetailsContent}>
+                <View style = {styles.ratingContainer}>
+                    <Text style = {styles.bookRating}>4.3</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Rating</Text>
+                </View>
+                <View style = {styles.pagesCountContainer}>
+                    <Text style = {styles.bookRating}>454</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Pages</Text>
+                </View>
+                <View style = {styles.downloadsContainer}>
+                    <Text style = {styles.bookRating}>23.26k</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Download</Text>
+                </View>
+                  
+              </View>    
+            </View>
+          </View>
+        </View>
+        <View style = {styles.descriptionContainer}>
+          <View style = {styles.descriptionText}>
+              <View style = {styles.descriptionLabel}>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', marginLeft: 60, fontSize: 20}}>Description</Text>
+              </View>
+            <ScrollView>
+              <View style = {[styles.description, {height: '110%', width: '85%', marginLeft: '7%'}]}>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 21}}>
+                    The kingdom of Ile-Rien is in peril, menaced by magical threats and court intrigue. As the weak King Roland, misled by treacherous companions, rules the country, only his ruthless mother, the Dowager Queen Ravenna, truly guards the safety of the realm.
+                </Text>
+              </View>
+            </ScrollView>
+          </View>
+          <View style = {styles.downloadBoxContainer}>
+            <View style = {styles.bookmarkBox}>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/bookmarks.png')} style = {styles.bookmarkIcon}/>
+                </TouchableOpacity>
+            </View>
+            <TouchableOpacity style = {styles.downloadButton}>
+              <View>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 25}}>Start Reading</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style = {styles.navigationBar}>
+            <LinearGradient
+                start={{x:0,y:1}}
+                end={{x:1,y:1}}
+                colors={['#202020', '#202020']}
+                style={styles.background1}>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/home.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/category.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/bookmarks.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/account-circle.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+            </LinearGradient>
+        </View>
+    </View>
+  );
+} */
+
+
+/* NIGHT AND DAY
+return (
+    <View style = {styles.container}>
+        <View style = {styles.overviewContainer}>
+            
+          <TouchableOpacity style = {styles.backBtn} activeOpacity = {0.1}>
+            <Image source = {require('./assets/back-icon.png')} style = {styles.buttonImageIconStyle}/>
+          </TouchableOpacity>
+          <Text style = {styles.backText}>Back</Text>
+          <Text style = {styles.overviewText}>Overview</Text>
+          <View style = {styles.bookContainerOverview}>
+            <View style = {styles.bookImageOverview}>
+                <Image source = {require('./assets/Image/night-and-day.jpg')} style = {{height: '100%', width: '30%', resizeMode: 'stretch'}}/>
+            </View>
+            <View style = {styles.bookDetails}>
+              <Text style = {styles.bookTitleOverviewLabel}>Night and Day</Text>
+              <Text style = {styles.bookAuthorOverviewLabel}>Virgina Woolf</Text>
+              <View style = {styles.bookDetailsContent}>
+                <View style = {styles.ratingContainer}>
+                    <Text style = {styles.bookRating}>4.8</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Rating</Text>
+                </View>
+                <View style = {styles.pagesCountContainer}>
+                    <Text style = {styles.bookRating}>332</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Pages</Text>
+                </View>
+                <View style = {styles.downloadsContainer}>
+                    <Text style = {styles.bookRating}>34.13k</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Download</Text>
+                </View>
+                  
+              </View>    
+            </View>
+          </View>
+        </View>
+        <View style = {styles.descriptionContainer}>
+          <View style = {styles.descriptionText}>
+              <View style = {styles.descriptionLabel}>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', marginLeft: 60, fontSize: 20}}>Description</Text>
+              </View>
+            <ScrollView>
+              <View style = {[styles.description, {height: '110%', width: '85%', marginLeft: '7%'}]}>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 18}}>
+                    Set in Edwardian London, Night and Day contrasts the daily lives and romantic attachments of two acquaintances, Katharine Hilbery and Mary Datchet.
+                </Text>
+              </View>
+            </ScrollView>
+          </View>
+          <View style = {styles.downloadBoxContainer}>
+            <View style = {styles.bookmarkBox}>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/bookmarks.png')} style = {styles.bookmarkIcon}/>
+                </TouchableOpacity>
+            </View>
+            <TouchableOpacity style = {styles.downloadButton}>
+              <View>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 25}}>Start Reading</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style = {styles.navigationBar}>
+            <LinearGradient
+                start={{x:0,y:1}}
+                end={{x:1,y:1}}
+                colors={['#202020', '#202020']}
+                style={styles.background1}>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/home.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/category.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/bookmarks.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/account-circle.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+            </LinearGradient>
+        </View>
+    </View>
+  );
+} */
+
+/*
+Mademoiselle at Arms
+return (
+    <View style = {styles.container}>
+
+        <View style = {styles.overviewContainer}>
+
+          <TouchableOpacity style = {styles.backBtn} activeOpacity = {0.1}>
+            <Image source = {require('./assets/back-icon.png')} style = {styles.buttonImageIconStyle}/>
+          </TouchableOpacity>
+          <Text style = {styles.backText}>Back</Text>
+
+          <Text style = {styles.overviewText}>Overview</Text>
+
+          <View style = {styles.bookContainerOverview}>
+
+            <View style = {styles.bookImageOverview}>
+                <Image source = {require('./assets/Image/m.jpg')} style = {{height: '100%', width: '30%', resizeMode: 'stretch'}}/>
+            </View>
+
+            <View style = {styles.bookDetails}>
+
+              <Text style = {styles.bookTitleOverviewLabel}>Mademoiselle at Arms</Text>
+              <Text style = {styles.bookAuthorOverviewLabel}>Elizabeth Bailey</Text>
+
+              <View style = {styles.bookDetailsContent}>
+
+                <View style = {styles.ratingContainer}>
+                    <Text style = {styles.bookRating}>4.4</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Rating</Text>
+
+                </View>
+
+                <View style = {styles.pagesCountContainer}>
+                    <Text style = {styles.bookRating}>421</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Pages</Text>
+                </View>
+
+                <View style = {styles.downloadsContainer}>
+                    <Text style = {styles.bookRating}>26.3k</Text>
+                    <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 10}}>Download</Text>
+                </View>
+
+              </View>    
+
+            </View>
+
+          </View>
+
+        </View>
+
+        <View style = {styles.descriptionContainer}>
+
+          <View style = {styles.descriptionText}>
+
+              <View style = {styles.descriptionLabel}>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', marginLeft: 60, fontSize: 20}}>Description</Text>
+              </View>
+
+            <ScrollView>
+              <View style = {[styles.description, {height: '110%', width: '85%', marginLeft: '7%'}]}>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 18}}>
+                    Set on unravelling the mystery, Gerald begins a relentless pursuit, hunting down every possible clue - much to the indignation of Mademoiselle. When her life proves to be in danger from the villainous émigré Valade, Gerald has his work cut out. For Mademoiselle Melusine, engaged in a desperate battle to prove her true identity, believes she is well able to take care of herself and is determined not to be rescued.
+                </Text>
+              </View>
+            </ScrollView>
+
+          </View>
+
+          <View style = {styles.downloadBoxContainer}>
+
+            <View style = {styles.bookmarkBox}>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/bookmarks.png')} style = {styles.bookmarkIcon}/>
+                </TouchableOpacity>
+            </View>
+
+            <TouchableOpacity style = {styles.downloadButton}>
+              <View>
+                <Text style = {{color: 'white', fontFamily: 'Kollektif', fontSize: 25}}>Start Reading</Text>
+              </View>
+            </TouchableOpacity>
+
+          </View>
+
+        </View>
+
+        <View style = {styles.navigationBar}>
+            <LinearGradient
+                start={{x:0,y:1}}
+                end={{x:1,y:1}}
+                colors={['#202020', '#202020']}
+                style={styles.background1}>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/home.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/category.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/bookmarks.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image source = {require('./assets/account-circle.png')} style = {styles.iconNavBar}/>
+                </TouchableOpacity>
+            </LinearGradient>
+        </View>
+    </View>
   );
 
-}
-
+}*/
 
 const styles = StyleSheet.create({
   container: {
